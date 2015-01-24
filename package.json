@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon server.js",
-    "test-js": "beefy ./app.js  --live --open --index public/index.html -- -g hbsfy",
+    "test-js": "beefy ./public/app.js:build.js --index ./public/index.html --live --open -- -g hbsfy",
     "watch-css": "compass watch",
-    "watch": "npm run test-js && watch-css",
+    "watch": "npm run watch-css & npm run test-js ",
     "build-pro": "browserify public/index.js -g [envify --NODE_ENV production] -g hbsfy -o > public/js/build.js"
   },
   "author": {
@@ -20,12 +20,6 @@
     "url": ""
   },
   "license": "MIT",
-  "dependencies": {
-    "multiparty": "^4.1.0",
-    "routes": "1.2.0",
-    "webworkify": "0.1.0",
-    "debug": "^2.1.1"
-  },
   "dependencies": {
     "body": "^4.5.0",
     "ecstatic": "~0.5.8",
@@ -44,6 +38,7 @@
     "tape": "~2.3.2",
     "envify": "3.2.0",
     "uglifyify": "^2.6.0",
-    "beefy":">=2.1.2"
+    "beefy": ">=2.1.2",
+    "catw": "^0.2.0"
   }
 }
