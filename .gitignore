@@ -21,8 +21,6 @@ js/coverage
 
 #files folder for local testing
 files/*
-upload/*
-scripts/*
 
 #asp stuff
 Views/*

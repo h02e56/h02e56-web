@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon server.js",
-    "test-js": "beefy ./public/index.js --live -- -g hbsfy -d -o ./public/test.browser.js -v",
+    "test-js": "beefy ./app.js  --live --open --index public/index.html -- -g hbsfy",
     "watch-css": "compass watch",
     "watch": "npm run test-js && watch-css",
     "build-pro": "browserify public/index.js -g [envify --NODE_ENV production] -g hbsfy -o > public/js/build.js"
