@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon server.js",
-    "test-js": "beefy ./public/app.js:build.js --index ./public/index.html --live --open -- -g hbsfy",
-    "watch-css": "compass watch",
+    "test-js": "beefy ./public/app.js:build.js --index ./public/index.html --live --open --browserify -g hbsfy",
+    "watch-css": "catw -c 'compass compile' public/sass/*.scss",
     "watch": "npm run watch-css & npm run test-js ",
     "build-pro": "browserify public/index.js -g [envify --NODE_ENV production] -g hbsfy -o > public/js/build.js"
   },
