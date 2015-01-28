@@ -1,6 +1,6 @@
 /* line 3, ../sass/main.scss */
 .hide {
-  display: none;
+  display: block;
 }
 
 /* line 6, ../sass/main.scss */
@@ -15,5 +15,5 @@ a:focus {
 
 /* line 14, ../sass/main.scss */
 .test {
-  background: green;
+  background: red;
 }

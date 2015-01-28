@@ -1,7 +1,7 @@
 @import "base";
 
 .hide{
-  display: none;
+  display: block;
 }
 .clearfix{
   clear:both;
@@ -12,7 +12,7 @@ a:focus{
 }
 
 .test{
-  background: green;
+  background: red;
 }
 
 
