@@ -6,9 +6,9 @@
   "scripts": {
     "start": "nodemon server.js",
     "start-dev":"node devserver.js",
-    "test-js": "beefy ./public/app.js:public/js/build.js --open --index=./public/index.html --live -- -g hbsfy",
+    "test-js": "beefy ./public/app.js:public/js/build.js --live --index=./public/index.html --  -g hbsfy -d",
     "watch-css": "catw -w -c 'compass compile' ./public/sass/*.scss",
-    "watch": "npm run test-js & npm run watch-css",
+    "watch": "npm run watch-css & npm run test-js ",
     "build-pro": "browserify ./public/app.js -g [envify --NODE_ENV production] -g hbsfy -o > public/js/build.js"
   },
   "author": {

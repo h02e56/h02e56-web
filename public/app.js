@@ -2,7 +2,8 @@
 var Handlebars = require('app/handlebars')
 var template = require('app/templates/index.hbs');
 
-document.body.innerHTML = template({ name: "Epeli" });
+console.log('im here man come to daddi am, rest in peace');
+document.getElementById('content').innerHTML = template({ name: "johnn Doe" });
 
 
 	
