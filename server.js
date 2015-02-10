@@ -20,6 +20,7 @@ var path = require('path');
 var config = require('./config.js')
 
 var router = require('routes')();
+
 router.addRoute('/', require('./routes/index.js'))
 
 

@@ -1,9 +1,11 @@
 var fs = require('fs')
 var path = require('path')
-// var trumpet = require('trumpet');
+var trumpet = require('trumpet');
 
 var Handlebars = require('app/handlebars')
-var index = require("../views/index.hbs");
+var index = '../views/index.hbs';
+
+var template = Handlebars.compile(index);
 
 var encode = require('he').encode;
 
