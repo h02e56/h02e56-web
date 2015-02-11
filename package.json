@@ -4,7 +4,8 @@
   "description": "basic env",
   "main": "index.js",
   "scripts": {
-    "server": "NODE_ENV=development nodemon server.js",
+    "server": "nodemon server.js",
+    "dev": "nodemon server.js",
     "test-js": "beefy ./app.js  --live --open --index public/index.html -- -g hbsfy",
     "watch-css": "compass watch",
     "watch": "npm run test-js && watch-css",

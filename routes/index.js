@@ -1,26 +1,24 @@
 var fs = require('fs')
 var path = require('path')
-var trumpet = require('trumpet');
 
-var Handlebars = require('app/handlebars')
-var index = '../views/index.hbs';
-
-var template = Handlebars.compile(index);
-
-var encode = require('he').encode;
+var handlebars = require('handlebars-stream');
 
 module.exports = function (req, res, params) {
     
-    layout(res).end('welcome!');
-
+    var template = read('index.hbs')
+	
+	layout(res)
+    
     function layout (res) {
 	    res.setHeader('content-type', 'text/html');
-	    var tr = trumpet();
-	    read('layout.html').pipe(tr).pipe(res);
-	    return tr.createWriteStream('#body');
+	    var temp = handlebars(template)
+	    temp.write({date: new Date()})
+	    temp.on('data', function (chunk){
+	    	res.end(chunk)
+	    })
 	}
 
 	function read (file) {
-	    return fs.createReadStream(path.join('./static', file));
+	    return fs.readFileSync('./static/' + file).toString();
 	}
 };
