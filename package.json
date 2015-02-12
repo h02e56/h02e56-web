@@ -4,12 +4,11 @@
   "description": "basic env",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js",
-    "dev": "nodemon server.js",
-    "test-js": "beefy ./app.js  --live --open --index public/index.html -- -g hbsfy",
-    "watch-css": "compass watch",
-    "watch": "npm run test-js && watch-css",
-    "build-pro": "browserify public/index.js -g [envify --NODE_ENV production] -g hbsfy -o > public/js/build.js"
+    "browser-sync": "./.bin/browser-sync.sh",
+    "debug": "node server.js -p 3000 --debug",
+    "dev": "npm run watch-js & npm run browser-sync", 
+    "watch-js": "watchify ./node_modules/app/public/app.js -o ./static/js/build.js",
+    "watch-css": "catw -w -c 'compass compile' ./public/sass/*.scss"    
   },
   "author": {
     "name": "Josep Boada",
