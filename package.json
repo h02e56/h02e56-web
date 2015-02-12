@@ -4,11 +4,11 @@
   "description": "basic env",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test-js": "beefy ./public/app.js:public/js/build.js --live --index=./public/index.html --  -g hbsfy -d",
-    "watch-css": "catw -w -c 'compass compile' ./public/sass/*.scss",
-    "watch": "npm run watch-css & npm run test-js ",
-    "build-pro": "browserify ./public/app.js -g [envify --NODE_ENV production] -g hbsfy -o > public/js/build.js"
+    "browser-sync": "./.bin/browser-sync.sh",
+    "debug": "node server.js -p 3000 --debug",
+    "dev": "npm run watch-js & npm run browser-sync", 
+    "watch-js": "watchify ./node_modules/app/public/app.js -o ./static/js/build.js",
+    "watch-css": "catw -w -c 'compass compile' ./public/sass/*.scss"    
   },
   "author": {
     "name": "Josep Boada",
@@ -23,6 +23,8 @@
   "dependencies": {
     "body": "^4.5.0",
     "ecstatic": "~0.5.8",
+    "handlebars-stream": "^1.4.0",
+    "hbsfy": "^2.0.0",
     "he": "^0.5.0",
     "is-root": "^1.0.0",
     "minimist": "^1.1.0",
@@ -30,8 +32,7 @@
     "tcp-bind": "^1.1.1",
     "through2": "^0.6.3",
     "trumpet": "^1.7.0",
-    "xtend": "^4.0.0",
-    "handlebars": "1.3.0"
+    "xtend": "^4.0.0"
   },
   "devDependencies": {
     "beefy": "2.1.2",
@@ -41,7 +42,6 @@
     "envify": "^3.2.0",
     "tape": "~2.3.2",
     "uglifyify": "^2.6.0",
-    "watchify": "^2.2.1",
-    "hbsfy": "^2.0.0"
+    "watchify": "^2.2.1"
   }
 }

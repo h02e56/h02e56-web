@@ -24,3 +24,6 @@ files/*
 
 #asp stuff
 Views/*
+
+#build
+static/js/build.js
