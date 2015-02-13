@@ -1,4 +1,3 @@
-var browserSync = require('browser-sync')
 var env = process.env.NODE_ENV || 'production'
 
 var alloc = require('tcp-bind');
@@ -15,12 +14,10 @@ var http = require('http');
 var ecstatic = require('ecstatic')(__dirname + '/static');
 var body = require('body/any');
 var xtend = require('xtend');
-var through = require('through2');
-var encode = require('he').encode;
-var fs = require('fs');
 var path = require('path');
 
 var config = require('./config.js')
+var browserSync = require('browser-sync')
 
 var router = require('routes')();
 
