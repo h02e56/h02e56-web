@@ -11,9 +11,9 @@ module.exports = function (req, res, params) {
     
     function layout (res) {
 	    res.setHeader('content-type', 'text/html');
-	    var temp = handlebars(template)
-	    temp.write({title: 'joes soaa'})
-	    temp.on('data', function (chunk){
+	    var strm = handlebars(template)
+	    strm.write({title: 'joes soaa'})
+	    strm.on('data', function (chunk){
 	    	res.end(chunk)
 	    })
 	}

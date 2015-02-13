@@ -4,9 +4,10 @@
   "description": "basic env",
   "main": "index.js",
   "scripts": {
+    "server": "node server.js -p 3000",
     "browser-sync": "./.bin/browser-sync.sh",
     "debug": "node server.js -p 3000 --debug",
-    "dev": "npm run watch-js & npm run browser-sync", 
+    "dev": "npm run server & npm run watch-js & npm run browser-sync", 
     "watch-js": "watchify ./node_modules/app/public/app.js -o ./static/js/build.js",
     "watch-css": "catw -w -c 'compass compile' ./public/sass/*.scss"    
   },
