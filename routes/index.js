@@ -12,7 +12,7 @@ module.exports = function (req, res, params) {
     function layout (res) {
 	    res.setHeader('content-type', 'text/html');
 	    var strm = handlebars(template)
-	    strm.write({title: 'josep boada solass'})
+	    strm.write({title: 'josep boada'})
 	    strm.on('data', function (chunk){
 	    	res.end(chunk)
 	    })

@@ -1,3 +1,6 @@
+var browserSync = require('browser-sync')
+var env = process.env.NODE_ENV || 'production'
+
 var alloc = require('tcp-bind');
 var minimist = require('minimist');
 var argv = minimist(process.argv.slice(2), {
@@ -30,6 +33,7 @@ var server = http.createServer(function (req, res) {
     else ecstatic(req, res)
 });
 server.listen({ fd: fd }, function () {
+    if(env === 'development') fireBrowserSync()
     console.log('listening on :' + server.address().port);
 });
 
@@ -43,6 +47,19 @@ function post (fn) {
             fn(req, res, xtend(pvars, params));
         });
     };
+}
+
+//browser sync stuff
+function fireBrowserSync () {
+  browserSync({
+    proxy: 'localhost:' + argv.port,
+    files: [
+        './static/js/build.js',
+        './routes/*.js',
+        './static/css/*.css',
+        './static/*.hbs' 
+    ]
+  });
 }
 
 

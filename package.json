@@ -4,7 +4,7 @@
   "description": "basic env",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js -p 3000",
+    "server-dev": "NODE_ENV=development nodemon server.js -p 3000",
     "browser-sync": "./.bin/browser-sync.sh",
     "debug": "node server.js -p 3000 --debug",
     "dev": "npm run watch-js & npm run browser-sync", 
