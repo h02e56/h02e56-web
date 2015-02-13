@@ -27,3 +27,6 @@ Views/*
 
 #build
 static/js/build.js
+
+#content data
+data/*
