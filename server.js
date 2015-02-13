@@ -26,7 +26,6 @@ var router = require('routes')();
 
 router.addRoute('/', require('./routes/index.js'))
 
-
 var server = http.createServer(function (req, res) {
     var m = router.match(req.url);
     if (m) m.fn(req, res, m.params);
