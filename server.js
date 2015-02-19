@@ -53,9 +53,8 @@ function fireBrowserSync () {
         './static/js/build.js',
         './routes/*.js',
         './static/css/*.css',
-        './static/*.hbs' 
+        './static/*.hbs',
+        './data/*.json' 
     ]
   });
 }
-
-
