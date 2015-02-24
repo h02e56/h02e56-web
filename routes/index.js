@@ -1,8 +1,10 @@
 var fs = require('fs')
 var path = require('path')
 
+
 var JSONStream = require('JSONStream')
 var handlebars = require('handlebars-stream');
+var through = require('through2')
 
 module.exports = function (req, res, params) {
 
@@ -24,8 +26,10 @@ module.exports = function (req, res, params) {
 	}
 
 	function readData() {
-		return fs.createReadStream('./data/data.json',{ 
-			encoding: 'utf8'
-		})
+		return fs.createReadStream('./data/data.json')
 	}
+
+	
+	
+	
 };

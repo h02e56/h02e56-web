@@ -1,13 +1,12 @@
 {
-  "name": "basic-env",
+  "name": "static-website",
   "version": "0.0.1",
-  "description": "basic env",
+  "description": "my static website",
   "main": "index.js",
   "scripts": {
     "server-dev": "NODE_ENV=development nodemon server.js -p 3000",
-    "dev": "npm run server-dev & npm run watch-js",
     "watch-js": "watchify ./node_modules/app/public/app.js -o ./static/js/build.js",
-    "watch-css": "catw -w -c 'compass compile' ./public/sass/*.scss"
+    "dev": "npm run server-dev & npm run watch-js"
   },
   "author": {
     "name": "Josep Boada",
@@ -18,15 +17,20 @@
     "type": "git",
     "url": ""
   },
+  "engines": {
+    "node": ">=0.8.0"
+  },
   "license": "MIT",
   "dependencies": {
     "JSONStream": "^0.10.0",
     "body": "^4.5.0",
+    "domready": "^1.0.7",
     "ecstatic": "~0.5.8",
     "handlebars-stream": "^1.4.0",
     "hbsfy": "^2.0.0",
     "he": "^0.5.0",
     "is-root": "^1.0.0",
+    "jquery": "^1.11.2",
     "minimist": "^1.1.0",
     "routes": "^2.0.0",
     "tcp-bind": "^1.1.1",
@@ -35,13 +39,12 @@
     "xtend": "^4.0.0"
   },
   "devDependencies": {
-    "beefy": "2.1.2",
     "browserify": "^8.1.1",
-    "catw": "^0.2.0",
     "concat-stream": "^1.4.7",
     "envify": "^3.2.0",
     "tape": "~2.3.2",
     "uglifyify": "^2.6.0",
     "watchify": "^2.2.1"
-  }
+  },
+  "license":"MIT"
 }
