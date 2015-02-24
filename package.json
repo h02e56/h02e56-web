@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "NODE_ENV=development nodemon server.js -p 3000",
+    "server":"NODE_ENV=production node server.js",
     "watch-js": "watchify ./node_modules/app/public/app.js -o ./static/js/build.js",
     "dev": "npm run server-dev & npm run watch-js"
   },
