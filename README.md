@@ -1,0 +1,1 @@
+Based on [/substack-flavored-webapp](https://github.com/h02e56/substack-flavored-webapp) using handlebars as a template engine [/handlebars-stream](https://github.com/sorribas/handlebars-stream).
