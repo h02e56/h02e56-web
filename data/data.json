@@ -1,0 +1,74 @@
+{
+	"data":{
+		"titleDoc":"Josep Boada, Frontend developer",
+		"metaDescription": "Frontend developer from Barcelona. HTML, Javascript, CSS, Nodejs.",
+		"keywords": "front-end developer, josep boada, frontend developer, javascript, css, html, fullstack javascript, web development, single page applications, freelance, barcelona, node.js, javascript patterns",
+		"title": "Josep Boada",
+		"subTitle": "Frontend",
+		"description": "Interested in web devopment in general and focused in Javascript and HTML.",
+		"description2": "Available as a freelance I consider myself enought capable to achieve your projects goals.",
+		"description3": "I like Nodejs enviroment and i think that it's a must nowadays for frontend devopment at least. Also i don't stop appreciatting all developers work outside",
+		"knowledge": "Knowledge and interests: HTML, Javascript, jQuery, Nodejs(frontend tool and server), tasks runners, templates, ...",
+		"works":[
+			{
+				"title": "This Static Website",
+				"description": "Training and learning. Created using substack-flavored-webapp with handlebars as a template engine.",
+				"tasks": "Nodejs, Heroku, Bootstrap, handlebars",
+				"links": [
+					{
+						"url":"https://github.com/substack/substack-flavored-webapp",
+						"text":"substack flavored webapp"
+					},
+					{
+						"url":"https://github.com/sorribas/handlebars-stream",
+						"text":"handlebars stream"
+					}
+				]
+			},
+			{
+				"title": "Drag and drop for Puntoneutro",
+				"description": "Drag and drop SPA(?) for uploading encrypted files to thes server. If you want to protect your designs you should use it",
+				"tasks": "JS, FileAPI, HTML, browserify, NPM great stuff.",
+				"links":[
+					{
+						"url": "http://www.puntoneutro.net/locktosend",
+						"text":"Punto Neutro, LocktoSend"
+					}					
+				]
+			},
+			{
+				"title": "Full Stack Note Wall",
+				"description": "Just for training",
+				"tasks": "Node.js, Express, Mongodb, Mongoose, Browserify, promises, heroku",
+				"links":[
+					{
+						"url": "http://h02e56-wall.herokuapp.com/",
+						"text": "Heroku APP"
+					}	
+				]
+			},
+			{
+				"title": "Canesten Italia",
+				"description": "Layout for Canesten Italia website.",
+				"tasks": "HTML, JS, jQuery, CSS.",
+				"links":[
+					{
+						"url": "http://www.canesten.it",
+						"text": "Canesten Italia"
+					}	
+				]
+			},
+			{
+				"title": "Alrajhi Bank Web App",
+				"description": "Development of WebApp layout for an Android Application. Javascript, jQuery Mobile, CSS, Widgets, Templates, Jira, Scrum",
+				"tasks": "HTML, JS, jQuery, jQueryMobile, CSS",
+				"links":[
+					{
+						"url": "https://play.google.com/store/apps/details?id=es.connectis.mobile.alrajhi",
+						"text": "Alrajhi web app"
+					}	
+				]
+			}
+		]
+	}
+}
