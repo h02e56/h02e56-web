@@ -2,9 +2,6 @@ var env = process.env.NODE_ENV || 'production'
 
 var port = process.env.PORT || 3000
 
-if (argv.gid) process.setgid(argv.gid);
-if (argv.uid) process.setuid(argv.uid);
-
 var http = require('http');
 var ecstatic = require('ecstatic')(__dirname + '/static');
 var body = require('body/any');
