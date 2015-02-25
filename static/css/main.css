@@ -79,3 +79,12 @@ ul.description li{
   /*border-bottom: 1px dotted grey;*/
   padding-bottom:5px;
 }
+element.style {
+}
+.small, small {
+  font-size: 85%;
+}
+
+address {
+  margin-top: 10px;
+}

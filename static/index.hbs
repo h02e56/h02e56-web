@@ -42,10 +42,12 @@
                             </button>
                             <ul class="list-unstyled description hidden">
                                 <li>
-                                    {{description}}<br>{{tasks}}<br>
-                                    {{#each links}}
-                                        /<a href="{{url}}" target="_blank">{{text}}</a>
-                                    {{/each}}
+                                    <span class="h4">
+                                        {{description}}<br>{{tasks}}<br>
+                                        {{#each links}}
+                                            /<a href="{{url}}" target="_blank">{{text}}</a>
+                                        {{/each}}
+                                    </span>
                                 </li>                            
                             </ul>
                             
@@ -61,7 +63,7 @@
                 <span class="icon-linkedin2"></span>
                 <span class="icon-twitter2"></span>
             
-                <address class="small">
+                <address>
                     <strong>h02e56 Inc.</strong><br>
                     Barcelona<br>
                     <abbr title="Phone">P:</abbr> (+0034) 627944197<br>
