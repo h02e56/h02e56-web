@@ -24,7 +24,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <h1>{{title}} <small> | {{subTitle}}</small></h1>
                 <p>
@@ -41,7 +41,7 @@
                                 <span class="glyphicon glyphicon-chevron-right small" aria-hidden="true"></span>{{title}}
                             </button>
                             <ul class="list-unstyled description hidden">
-                                <li class="small">
+                                <li>
                                     {{description}}<br>{{tasks}}<br>
                                     {{#each links}}
                                         /<a href="{{url}}" target="_blank">{{text}}</a>
@@ -55,7 +55,7 @@
                 </section>
             </div> <!-- #main -->
         </div>
-        <footer class="container row">
+        <footer class="container">
             <div>
                 <span class="icon-github"></span>
                 <span class="icon-linkedin2"></span>
