@@ -33,11 +33,11 @@
                     {{knowledge}}
                 </p>
                 <section class="works">
-                    <h5>Last Works:</h5>
+                    <h4>Last Works:</h4>
                     <ul class="list-unstyled small">
                         {{#each works}}
                         <li>
-                            <button type="button"  class="btn btn-link btn-xs" data-action="toggle" >
+                            <button type="button"  class="btn btn-link" data-action="toggle" >
                                 <span class="glyphicon glyphicon-chevron-right small" aria-hidden="true"></span>{{title}}
                             </button>
                             <ul class="list-unstyled description hidden">
@@ -55,8 +55,8 @@
                 </section>
             </div> <!-- #main -->
         </div>
-        <footer class="container">
-            <div class="row">
+        <footer class="container row">
+            <div>
                 <span class="icon-github"></span>
                 <span class="icon-linkedin2"></span>
                 <span class="icon-twitter2"></span>
@@ -78,12 +78,10 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            var _gaq=[['_setAccount','UA-35060728-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
     </body>
 </html>

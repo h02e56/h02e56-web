@@ -15,6 +15,7 @@
 body{
   font-family: 'Yanone Kaffeesatz';
   padding:0 20px;
+  font-size:20px;
 }
 
 button:focus {outline:0;}
