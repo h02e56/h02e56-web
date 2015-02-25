@@ -2,10 +2,8 @@ var env = process.env.NODE_ENV || 'production'
 
 var alloc = require('tcp-bind');
 var minimist = require('minimist');
-var argv = minimist(process.argv.slice(2), {
-    alias: { p: 'port', u: 'uid', g: 'gid' },
-    default: { port: process.env.PORT || 3000 }
-});
+var port = process.env.PORT || 3000
+
 var fd = alloc(argv.port);
 if (argv.gid) process.setgid(argv.gid);
 if (argv.uid) process.setuid(argv.uid);
@@ -30,7 +28,7 @@ var server = http.createServer(function (req, res) {
 });
 server.listen({ fd: fd }, function () {
     if(env === 'development') fireBrowserSync()
-    console.log('listening on :' + server.address().port);
+    console.log('listening on :' + port);
 });
 
 function post (fn) {
@@ -46,9 +44,10 @@ function post (fn) {
 }
 
 //browser sync stuff
+
 function fireBrowserSync () {
   browserSync({
-    proxy: 'localhost:' + argv.port,
+    proxy: 'localhost:' + port,
     files: [
         './static/js/build.js',
         './routes/*.js',
