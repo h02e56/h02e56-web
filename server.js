@@ -4,7 +4,7 @@ var alloc = require('tcp-bind');
 var minimist = require('minimist');
 var argv = minimist(process.argv.slice(2), {
     alias: { p: 'port', u: 'uid', g: 'gid' },
-    default: { port: require('is-root')() ? 80 : 3000 }
+    default: { port: process.env.PORT || 3000 }
 });
 var fd = alloc(argv.port);
 if (argv.gid) process.setgid(argv.gid);
