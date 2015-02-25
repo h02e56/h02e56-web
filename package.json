@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "NODE_ENV=development nodemon server.js -p 3000",
-    "start":"NODE_ENV=production node server.js",
+    "start":"NODE_ENV=production node server.js -p 3000",
     "watch-js": "watchify ./node_modules/app/public/app.js -o ./static/js/build.js",
     "dev": "npm run server-dev & npm run watch-js"
   },
@@ -14,12 +14,13 @@
     "email": "josep@h02e56.com",
     "url": "http://www.h02e56.com"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
+  "repository" :{
+     "type" : "git",
+     "url" : "https://github.com/h02e56/h02e56-web.git"
   },
   "engines": {
-    "node": "^0.8.0"
+    "node": "^0.8.0",
+    "npm": "^1.4.28"
   },
   "license": "MIT",
   "dependencies": {
