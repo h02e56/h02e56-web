@@ -9,7 +9,6 @@ var xtend = require('xtend');
 var path = require('path');
 
 var config = require('./config.js')
-var browserSync = require('browser-sync')
 
 var router = require('routes')();
 
@@ -21,7 +20,10 @@ var server = http.createServer(function (req, res) {
     else ecstatic(req, res)
 });
 server.listen({ fd: fd }, function () {
-    if(env === 'development') fireBrowserSync()
+    if(env === 'development') {
+        var browserSync = require('browser-sync');
+        fireBrowserSync()   
+    }
     console.log('listening on :' + port);
 });
 
