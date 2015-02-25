@@ -1,6 +1,5 @@
 var env = process.env.NODE_ENV || 'production'
 
-var minimist = require('minimist');
 var port = process.env.PORT || 3000
 
 if (argv.gid) process.setgid(argv.gid);
