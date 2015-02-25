@@ -19,7 +19,8 @@ var server = http.createServer(function (req, res) {
     if (m) m.fn(req, res, m.params);
     else ecstatic(req, res)
 });
-server.listen({ fd: fd }, function () {
+
+server.listen(port, function () {
     if(env === 'development') {
         var browserSync = require('browser-sync');
         fireBrowserSync()   
